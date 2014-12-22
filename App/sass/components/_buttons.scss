@@ -1,0 +1,119 @@
+@mixin button($color, $background, $hover-background, $active-background, $disabled-background: $gray-light) {
+    color: $color;
+    background-color: $background;
+    &:hover,
+    &.hover,
+    &:focus,
+    &:active,
+    &.active,
+    .open > .dropdown-toggle & {
+        color: $color;
+        background-color: $hover-background;
+        border-color: $hover-background;
+    }
+    &:active,
+    &.active,
+    .open > .dropdown-toggle & {
+        background: $active-background;
+        border-color: $active-background;
+    }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        &,
+        &:hover,
+        &.hover,
+        &:focus,
+        &:active,
+        &.active {
+            background-color: $disabled-background;
+            border-color: $background;
+        }
+    }
+}
+
+// --------------------------------------------------
+// Buttons
+// --------------------------------------------------
+.btn {
+    border: none;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: normal;
+    border-radius: $btn-border-radius;
+    padding: 10px 15px;
+    display: inline-block;
+    min-width: 130px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-font-smoothing: subpixel-antialiased;
+    transition: border .25s linear, color .25s linear, background-color .25s linear;
+    &:hover,
+    &:focus {
+        outline: none;
+        text-decoration: none;
+        color: $btn-color;
+    }
+    &:active,
+    &.active {
+        outline: none;
+        box-shadow: none;
+    }
+    &:focus:active {
+        outline: none;
+    }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        background-color: $btn-disabled-background;
+        color: opacify($btn-color, 0.75);
+        cursor: pointer;
+    }
+
+    // Button icons
+    [class^="fui-"] {
+      margin: 0 2px 0 -3px;
+      position: relative;
+      line-height: 1;
+      top: 1px;
+
+      
+      .btn-xs & {
+        font-size: 11px;
+        top: 0;
+      }
+      .btn-hg & {
+        top: 2px;
+      } 
+    }  
+}
+
+// --------------------------------------------------
+// Alternative styles
+// --------------------------------------------------
+
+.btn {
+    @include button($btn-color, $btn-background, $btn-hover-background, $btn-active-background);
+}
+
+.btn-info {
+    @include button($btn-color, #5dade2, $btn-hover-background, $btn-active-background);
+}
+
+.btn-error {
+    @include button($btn-color, #e74c3c, $btn-hover-background, $btn-active-background);
+}
+
+.btn-success {
+    @include button($btn-color, #11A518, $btn-hover-background, $btn-active-background);
+}
+
+.btn-warning {
+    @include button($btn-color, #FF7E00, $btn-hover-background, $btn-active-background);
+}
+
+.btn-wide {
+    min-width: 140px;
+    padding-left: 30px;
+    padding-right: 30px;
+}

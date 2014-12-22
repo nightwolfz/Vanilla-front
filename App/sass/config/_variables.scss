@@ -1,0 +1,42 @@
+/* Fonts */
+$font-family: Helvetica, Arial, sans-serif;
+$font-size: 14px;
+$header-font-family: LatoLatin, Helvetica, Arial, sans-serif;
+$text-font-path: "../img/lato-latin-regular";
+$icon-font-path: "../img/flat-ui-icons-regular";
+
+
+/* Colors */
+$company-color: #da1d79;
+$gray-dark: #595959;
+$gray-light: #e0e1e3;
+
+$brand-primary: #1A9425;
+$brand-secondary: #1A9425;
+
+/* Paths */
+$img-path: "../img";
+
+/* Debugging */
+$show-grid-lines: false;
+$grid-lines-color: orange;
+
+
+/* Buttons */
+$btn-color: #fff;
+$btn-background: #d4007a;
+$btn-active-background: #d4007a;
+$btn-hover-background: #676F73;
+$btn-border-radius: 2px;
+$btn-disabled-background: opacify($btn-active-background, 0.75);
+
+/* Inputs */
+$input-color: #333;
+$input-background: #fefefe;
+$input-active-background: #fafafa;
+$input-border-radius: 3px;
+
+/* checkbox & radio */
+$component-font-size: 14px;
+$checkbox-color: #1A9425;
+$inverse: white;

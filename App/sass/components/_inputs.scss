@@ -1,0 +1,58 @@
+@mixin input($input-color, $input-background, $input-active-background, $input-disabled-background: $gray-light) {
+    color: $input-color;
+    background-color: $input-background;
+    border: 2px solid $input-color;
+    border-radius: $input-border-radius;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+
+    &.disabled,
+    &[disabled] {
+        background-color: $input-disabled-background;
+        border-color: $input-background;
+    }
+
+    // Animations
+    &:-ms-input-placeholder {
+        -ms-transition: 0.4s all ease;
+    }
+    &::-moz-input-placeholder {
+        -moz-transition: 0.4s all ease;
+    }
+    &::-webkit-input-placeholder {
+        -webkit-transition: 0.4s all ease;
+    }
+    &:focus:-ms-input-placeholder, &:hover:-ms-input-placeholder {
+        color: $input-background;
+    }
+    &:focus::-moz-input-placeholder, &:hover::-moz-input-placeholder {
+        padding-left: 100px;
+        opacity: 0;
+    }
+    &:focus::-webkit-input-placeholder, &:hover::-webkit-input-placeholder {
+        padding-left: 100px;
+        opacity: 0;
+    }
+}
+
+// Classes
+// --------------------------------------------------
+input {
+    font-size: 15px;
+    padding: 8px 12px;
+    line-height: 1.467;
+    outline: none;
+    @include input($input-color, $input-background, $input-active-background);
+}
+
+input[disabled] {
+    @include input(#777, #999, $input-active-background);
+}
+
+.input-success {
+    @include input(#11A518, $input-background, $input-active-background);
+}
+
+.input-error {
+    @include input(#e74c3c, $input-background, $input-active-background);
+}

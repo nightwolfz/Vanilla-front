@@ -1,0 +1,13 @@
+@if $show-grid-lines {
+  .row {
+    border: 1px dashed $grid-lines-color;
+  }
+
+  .columns {
+    border: 1px dashed $grid-lines-color;
+  }
+
+  ul[class*="block-grid-"] li {
+    border: 1px dashed $grid-lines-color;
+  }
+}
