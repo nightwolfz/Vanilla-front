@@ -3,49 +3,39 @@
 
   <h2>{{helloWorld.Message}}</h2>
 
-  <div class="row">
-    <form class="colored-typo-showcase clearfix">
+  <div class="row colored-typo-showcase clearfix">
 
-      <div class="large-2 medium-3 columns">
-        <p><a href="#fakelink" class="btn">Default Button</a></p>
-        <p><a href="#fakelink" class="btn btn-warning"><span class="fui-alert-circle"></span> Warning Button</a></p>
-        <p><a href="#fakelink" class="btn btn-success"><span class="fui-check"></span> Success Button</a></p>
-        <p><a href="#fakelink" class="btn btn-error"><span class="fui-cross"></span> Error Button</a></p>
+      <div class="col-3">
+        <p><a class="btn">Default Button</a></p>
+        <p><a class="btn btn-warning"><span class="fui-alert-circle"></span> Warning Button</a></p>
+        <p><a class="btn btn-success"><span class="fui-check"></span> Success Button</a></p>
+        <p><a class="btn btn-error"><span class="fui-cross"></span> Error Button</a></p>
       </div>
 
-      <div class="large-3 medium-3 columns">
+      <div class="col-3">
         <p><input type="text" placeholder="Inactive"></p>
         <p><input type="text" placeholder="Error" class="input-error"></p>
         <p><input type="text" placeholder="Success" class="input-success"></p>
         <p><input type="text" placeholder="Disabled" disabled="disabled"></p>
       </div>
 
-      <div class="large-3 medium-2 columns"><br>
+      <div class="col-3"><br>
           <checkbox name="checkBox1" value="no">Unchecked</checkbox><br>
           <checkbox name="checkBox1" value="yes" checked="checked">Checked</checkbox><br>
           <checkbox name="checkBox2" value="yes" disabled="disabled">Disabled unchecked</checkbox><br>
-          <checkbox name="checkBox2" value="no" checked="checked" disabled="disabled">Disabled checked</checkbox>
-
-          <br>
-
-          <dropdown label="Choose your option" class="cs-skin" ng-model="options">
-          </dropdown>
-
-          <br>
-
-          <dropdown label="Choose your option" class="cs-skin-boxes" ng-model="options">
-          </dropdown>
-
+          <checkbox name="checkBox2" value="no" checked="checked" disabled="disabled">Disabled checked</checkbox><br>
+          <dropdown name="dropName1" label="Choose your option" class="cs-skin" ng-model="options"></dropdown><br>
+          <dropdown label="Choose your option" class="cs-skin-boxes" ng-model="options"></dropdown>
       </div>
 
-      <div class="large-3 medium-2 columns"><br>
+      <div class="col-3 last"><br>
         <radio name="radioBox1" value="off">Radio is off</radio><br>
         <radio name="radioBox1" value="on" checked="checked">Radio is on</radio><br>
         <radio name="radioBox2" value="off" disabled="disabled">Disabled radio is off</radio><br>
         <radio name="radioBox2" value="on" checked="checked" disabled="disabled">Disabled radio is on</radio>
+        <p><a class="btn" ng-click="openModal()">Open Modal</a></p>
       </div>
 
-    </form>
   </div>
 
 
@@ -53,35 +43,46 @@
   <section class="colored-grid-showcase">
 
     <div class="row">
-      <div class="small-2 large-4 columns">4</div>
-      <div class="small-4 large-4 columns">4</div>
-      <div class="small-6 large-4 columns">4</div>
+      <div class="col-4 columns">4</div>
+      <div class="col-4 columns">4</div>
+      <div class="col-4 columns last">4</div>
     </div>
     <div class="row">
-      <div class="large-3 columns">3</div>
-      <div class="large-6 columns">6</div>
-      <div class="large-3 columns">3</div>
+      <div class="col-4 columns">3</div>
+      <div class="col-4 columns">6</div>
+      <div class="col-4 columns last">3</div>
     </div>
     <div class="row">
-      <div class="small-6 large-2 columns">2</div>
-      <div class="small-6 large-8 columns">8</div>
-      <div class="small-12 large-2 columns">2</div>
+      <div class="col-2 columns">2</div>
+      <div class="col-8 columns">8</div>
+      <div class="col-2 columns last">2</div>
     </div>
     <div class="row">
-      <div class="small-3 columns">3</div>
-      <div class="small-9 columns">9</div>
+      <div class="col-6 columns">
+        <div class="row">
+          <div class="col-6 columns">a</div>
+          <div class="col-6 columns last">b</div>
+        </div>
+      </div>
+      <div class="col-6 columns last">
+          <div class="row">
+            <div class="col-2 columns">a</div>
+            <div class="col-2 columns">b</div>
+            <div class="col-2 columns last">c</div>
+          </div>
+      </div>
     </div>
     <div class="row">
-      <div class="large-4 columns">4</div>
-      <div class="large-8 columns">8</div>
+      <div class="col-4 columns">4</div>
+      <div class="col-8 columns last">8</div>
     </div>
     <div class="row">
-      <div class="small-6 large-5 columns">5</div>
-      <div class="small-6 large-7 columns">7</div>
+      <div class="col-5 columns">5</div>
+      <div class="col-7 columns last">7</div>
     </div>
     <div class="row">
-      <div class="large-6 columns">6</div>
-      <div class="large-6 columns">6</div>
+      <div class="col-6 columns">6</div>
+      <div class="col-6 columns last">6</div>
     </div>
 
   </section>
@@ -91,10 +92,6 @@
     <h2>The big bad wolf jumps over silly sheep</h2>
     <h3>It's the wrong way to think but the right way to win.</h3>
     <h4>Risk is security in life and unreason is better than reason</h4>
-    <h4>
-      ĀāĂăĄąĆćĈĉĊċČčĎďĐđĒēĔĕĖėĘęĚěĜĝĞğĠġĢģĤĥĦħĨĩĪīĬĭĮįİıĲĳĴĵĶķĸĹĺĻļĽľĿŀŁł<br>
-      ŃńŅņŇňŉŊŋŌōŎŏŐőŒœŔŕŖŗŘřŚśŜŝŞşŠšŢţŤťŦŧŨũŪūŬŭŮůŰűŲųŴŵŶŷŸŹźŻżŽž
-    </h4>
   </section>
 
 
@@ -103,26 +100,27 @@
   <h2>Block Grid</h2>
   <h3>3 elements</h3>
   <div class="row">
-    <div class="large-12 columns">
-      <ul class="small-block-grid-3">
-        <li><img src="http://foundation.zurb.com/docs/assets/img/examples/satelite.jpg" /></li>
-        <li><img src="http://foundation.zurb.com/docs/assets/img/examples/space.jpg" /></li>
-        <li><img src="http://foundation.zurb.com/docs/assets/img/examples/spacewalk.jpg" /></li>
-      </ul>
-    </div>
+    <div class="col-4"><img src="http://foundation.zurb.com/docs/assets/img/examples/satelite.jpg" /></div>
+    <div class="col-4"><img src="http://foundation.zurb.com/docs/assets/img/examples/space.jpg" /></div>
+    <div class="col-4 last"><img src="http://foundation.zurb.com/docs/assets/img/examples/spacewalk.jpg" /></div>
   </div>
 
   <h3>5 elements</h3>
   <div class="row">
-    <div class="large-12 columns">
-      <ul class="small-block-grid-5">
-        <li><img src="http://foundation.zurb.com/docs/assets/img/examples/satelite.jpg" /></li>
-        <li><img src="http://foundation.zurb.com/docs/assets/img/examples/space.jpg" /></li>
-        <li><img src="http://foundation.zurb.com/docs/assets/img/examples/spacewalk.jpg" /></li>
-        <li><img src="http://foundation.zurb.com/docs/assets/img/examples/earth.jpg" /></li>
-        <li><img src="http://foundation.zurb.com/docs/assets/img/examples/comet.jpg" /></li>
-      </ul>
-    </div>
+    <div class="col-3"><img src="http://foundation.zurb.com/docs/assets/img/examples/satelite.jpg" /></div>
+    <div class="col-2"><img src="http://foundation.zurb.com/docs/assets/img/examples/space.jpg" /></div>
+    <div class="col-2"><img src="http://foundation.zurb.com/docs/assets/img/examples/spacewalk.jpg" /></div>
+    <div class="col-2"><img src="http://foundation.zurb.com/docs/assets/img/examples/earth.jpg" /></div>
+    <div class="col-3 last"><img src="http://foundation.zurb.com/docs/assets/img/examples/comet.jpg" /></div>
   </div>
 
 </section>
+
+
+
+<modal id="somemodal">
+    <h2><strong>Howdy</strong>, I'm a modal box</h2>
+    <div>
+      <button class="btn action" ng-click="closeModal()">Close</button>
+    </div>
+</modal>

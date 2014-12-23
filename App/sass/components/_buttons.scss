@@ -1,4 +1,4 @@
-@mixin button($color, $background, $hover-background, $active-background, $disabled-background: $gray-light) {
+@mixin button($color, $background, $hover-background, $disabled-background: $gray-light) {
     color: $color;
     background-color: $background;
     &:hover,
@@ -14,8 +14,8 @@
     &:active,
     &.active,
     .open > .dropdown-toggle & {
-        background: $active-background;
-        border-color: $active-background;
+        background: $btn-active-background;
+        border-color: $btn-active-background;
     }
     &.disabled,
     &[disabled],
@@ -44,6 +44,7 @@
     padding: 10px 15px;
     display: inline-block;
     min-width: 130px;
+    cursor: pointer;
     text-align: center;
     text-decoration: none;
     -webkit-font-smoothing: subpixel-antialiased;
@@ -58,6 +59,7 @@
     &.active {
         outline: none;
         box-shadow: none;
+        transition: none;
     }
     &:focus:active {
         outline: none;
@@ -93,23 +95,23 @@
 // --------------------------------------------------
 
 .btn {
-    @include button($btn-color, $btn-background, $btn-hover-background, $btn-active-background);
+    @include button($btn-color, $btn-background, darken($btn-background, 10%));
 }
 
 .btn-info {
-    @include button($btn-color, #5dade2, $btn-hover-background, $btn-active-background);
+    @include button($btn-color, #5dade2, darken(#5dade2, 20%));
 }
 
 .btn-error {
-    @include button($btn-color, #e74c3c, $btn-hover-background, $btn-active-background);
+    @include button($btn-color, #e74c3c, darken(#e74c3c, 20%));
 }
 
 .btn-success {
-    @include button($btn-color, #11A518, $btn-hover-background, $btn-active-background);
+    @include button($btn-color, #11A518, darken(#11A518, 20%));
 }
 
 .btn-warning {
-    @include button($btn-color, #FF7E00, $btn-hover-background, $btn-active-background);
+    @include button($btn-color, #FF7E00, darken(#FF7E00, 20%));
 }
 
 .btn-wide {

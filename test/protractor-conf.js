@@ -9,7 +9,7 @@ exports.config = {
     'browserName': 'chrome'
   },
 
-  chromeOnly: true,
+  directConnect: true,
 
   chromeDriver: '../node_modules/protractor/selenium/chromedriver',
 
@@ -19,7 +19,7 @@ exports.config = {
 
   mochaOpts: {
     reporter: 'spec',
-    
+
     // Timeouts disabled until selenium releases the fix.
     // https://github.com/angular/protractor/issues/1109
     enableTimeouts: false

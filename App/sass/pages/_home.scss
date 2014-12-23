@@ -16,15 +16,18 @@ section#home {
   }
 
   .colored-grid-showcase {
-    .row {
+
+
+    .row .columns {
       background: #eee;
-      border: solid 1px #c6c6c6;
+      border: 1px solid #ccc;
+      padding: 1em;
     }
 
     .row .columns:nth-child(2),
     .row .columns.small-centered,
     .row .columns.large-centered {
-      background: #e1e1e1;
+      background: #ddd;
     }
   }
 }

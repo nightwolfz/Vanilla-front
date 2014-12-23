@@ -16,10 +16,7 @@ angular.module('myApp.factories').
         return response;
       },
       responseError: function (rejection) {
-        if (rejection.status === 404) {
-          $location.path('/404');
-        }
-        else if (rejection.status === 500) {
+        if (rejection.status === 500) {
           $location.path('/500');
         }
         return $q.reject(rejection);

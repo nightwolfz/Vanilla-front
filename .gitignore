@@ -10,3 +10,4 @@ tmp
 /package
 .sass-cache/
 index.html
+npm-debug.log

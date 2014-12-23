@@ -33,7 +33,7 @@ module.exports = {
       config: {
         src: './app/js/config',
         dest: './app/js/config.js'
-      } 
+      }
     },
     logs: {
       src: 'logs',

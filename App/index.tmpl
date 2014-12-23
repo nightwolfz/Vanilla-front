@@ -32,7 +32,7 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-  <div id="container" class="column">
+  <div id="container">
     <div ng-view></div>
     <div>Vanilla App: v<span app-version></span></div>
   </div>
@@ -44,7 +44,7 @@
   <script src="bower_components/angular-resource/angular-resource.js"></script>
 
   <!-- application -->
-  <script src="js/config/dev.js"></script>
+  <script src="js/config.js"></script>
   <script src="js/app.js"></script>  
 
   <!-- controllers -->
@@ -54,6 +54,7 @@
   <!-- directives -->
   <script src="js/directives/app-version.js"></script>
   <script src="js/directives/selectables.js"></script>
+  <script src="js/directives/modal.js"></script>
 
   <!-- factories -->
   <script src="js/factories/http-interceptor.js"></script>

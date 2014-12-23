@@ -15,7 +15,6 @@
     padding: 1em;
     text-align: left;
     list-style: none;
-    z-index: 99000;
 
     a {
         color: #fff;
@@ -36,11 +35,11 @@
     li {
         font: bold 12px/18px sans-serif;
         display: inline-block;
-        margin-right: -4px;
+        margin-right: -5px;
+        z-index: 20;
         position: relative;
         background: darken($company-color, 15%);
         cursor: pointer;
-        z-index: 99001;
         @include transition;
 
         &:hover {

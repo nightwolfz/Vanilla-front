@@ -64,10 +64,14 @@ angular.module('myApp.directives').directive('dropdown', function($parse, $compi
             var options = $compile(scope.ngModel)(scope);
             var select = element.find('select');
 
-            attr.$observe('class', function(value) {
-                element.addClass(value);
-                element.find('select').addClass(value);
-            });
+            if (attr['name']){
+                select.attr('name', attr['name']);
+            }
+
+            if (attr['class']){
+                element.addClass(attr['class']);
+                select.attr('class', attr['class']);
+            }
 
             // Open / Close dropdown
             function toggleSelect(){

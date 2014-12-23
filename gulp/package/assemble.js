@@ -5,10 +5,10 @@ var fse = require('fs-extra');
 var path = require('path');
 var utils = require('../utils');
 var paths = require('../config').paths;
-var envPath = path.join(paths.package.src, utils.getEnv());
-var dest = path.join(envPath, 'App');
 
 gulp.task('package-assemble', function () {
+  var envPath = path.join(paths.package.src, utils.getEnv());
+  var dest = path.join(envPath, 'App');
   fse.ensureDirSync(paths.package.src);
   fse.mkdirSync(envPath);
   fse.copySync(paths.app.src, dest);
